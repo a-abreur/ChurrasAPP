@@ -1,61 +1,61 @@
-# 🎉 BirthAPP
+# 🛒 Gerador de Lista de Compras para Churrasco
 
 ## 📌 Descrição
-**BirthAPP** é um aplicativo desenvolvido para automatizar o envio de mensagens de felicitação por e-mail para aniversariantes e colaboradores que estão completando mais um ano na empresa. Ele foi pensado para empresas que desejam manter um ambiente corporativo mais acolhedor e engajado.
-
----
+Este é um programa simples que auxilia na organização de um churrasco, calculando automaticamente a quantidade necessária de carne, pão de alho, bebidas e outros itens com base na quantidade de adultos e crianças informada pelo usuário. O programa exibe a lista de compras diretamente no terminal de forma estilizada.
 
 ## 🚀 Tecnologias Utilizadas
+- **Python** (Linguagem principal)
+- **Rich** (Para formatação estilizada no terminal)
 
-- **Python** - Linguagem principal do projeto
-- **Pandas** - Manipulação de dados no arquivo Excel
-- **OpenPyXL** - Leitura de arquivos Excel
-- **SMTP** - Envio de e-mails automáticos
-- **Twilio (Futuro)** - Envio de mensagens via WhatsApp
-- **Selenium (Futuro)** - Automação de processos
+## 🔧 Como Executar o Projeto
 
----
+### 📥 1. Instale o Python (se ainda não tiver)
+Este programa requer o Python instalado. Você pode baixá-lo em:
+[https://www.python.org/downloads/](https://www.python.org/downloads/)
 
-## 🛠 Como Rodar o Projeto
+### 📦 2. Instale a biblioteca Rich
+O programa usa a biblioteca `rich` para exibir a saída de forma estilizada no terminal. Para instalá-la, use o seguinte comando:
 
-### 🔹 1. Pré-requisitos
-- Ter o **Python** instalado (versão 3.8 ou superior)
-- Criar uma conta no **Gmail** para envio de e-mails
-- Ativar a opção de "Acesso a aplicativos menos seguros" no Gmail (ou configurar o OAuth2)
-
-### 🔹 2. Instalar Dependências
-Abra o terminal e execute:
 ```sh
-pip install pandas openpyxl smtplib
+pip install rich
 ```
 
-### 🔹 3. Configurar o Arquivo Excel
-O arquivo Excel deve conter as seguintes colunas:
-| Nome  | Email | Data de Nascimento | Data de Entrada |
-|-------|------------|------------------|---------------|
-| João  | joao@email.com | 1990-03-18 | 2015-03-18 |
-| Maria | maria@email.com | 1985-07-22 | 2012-07-22 |
+### ▶ 3. Execute o Programa
+Baixe o código e execute no terminal com:
 
-> **Obs.:** O nome do arquivo Excel deve ser passado como parâmetro ao rodar o script.
-
-### 🔹 4. Executar o Programa
 ```sh
-python birthapp.py dados.xlsx
+python churrasco.py
 ```
 
+O programa solicitará a quantidade de adultos e crianças e mostrará a lista de compras formatada.
+
+## 🎯 Exemplo de Uso
+
+Entrada:
+```sh
+Quantos adultos? 5
+Quantas crianças? 3
+```
+
+Saída:
+```sh
+===============================
+      🥩 Lista de Compras 🛒      
+===============================
+✅ Carne: 7.5 kg
+✅ Pão de Alho: 8 unidades
+✅ Refrigerante: 4 litros
+✅ Carvão: 1 saco grande
+...
+===============================
+```
+
+## 🌟 Melhorias Futuras
+- ✅ Gerar um **PDF** com a lista de compras
+- ✅ Criar uma **interface gráfica (GUI)** com Tkinter
+- ✅ Permitir personalização dos itens e quantidades padrão
 
 ---
+📌 **Autor:** Arthur Abreu
 
-## 🚀 Melhorias Futuras
-- 🔹 Implementação do envio de mensagens via **WhatsApp** (Twilio)
-- 🔹 Interface gráfica para facilitar o uso
-- 🔹 Integração com banco de dados para gerenciamento de funcionários
-- 🔹 Dashboard para visualização de aniversários e métricas
-- 🔹 Aprimoramento da Leitura do Excel: Incluir validações para garantir que o arquivo Excel esteja corretamente formatado antes de iniciar o processo de leitura e envio.
-- 🔹 Customização de Mensagens: Permitir que as mensagens enviadas sejam customizadas de acordo com o perfil do colaborador ou departamento.
-
----
-
-## 📝 Autor
-**Arthur Abreu** - Desenvolvedor do BirthAPP
 
